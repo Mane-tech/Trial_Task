@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
 public class WWEChampionsFramePage {
     WebDriver driver;
 
@@ -21,7 +19,7 @@ public class WWEChampionsFramePage {
     }
 
     public void clickAccountSettingsBtn() {
-        WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver,  20);
         wait.until(ExpectedConditions.elementToBeClickable(accountSettingsBtn));
         driver.findElement(accountSettingsBtn).click();
     }

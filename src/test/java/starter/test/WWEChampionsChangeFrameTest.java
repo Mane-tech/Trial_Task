@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import starter.page.WWEChampionsFramePage;
 import starter.page.WWEChampionsLoginPage;
 
-import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class WWEChampionsChangeFrameTest {
 
@@ -22,7 +22,7 @@ public class WWEChampionsChangeFrameTest {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\legion\\Downloads\\chromedriver.exe");
         driver.get("https://wwechampions.com/");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         // User login with ScopelyID
         wWEChampionsLoginPage.clickLoginBtn();
